@@ -3,9 +3,7 @@
 
 using System.Globalization;
 
-namespace TestApplication;
-
-
+namespace TestApp;
 
 class Program
 {
