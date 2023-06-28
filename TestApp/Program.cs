@@ -17,7 +17,7 @@ class Program
         // Solution4();
         // Solution5();
         var testStr = "This is a really really really long long long sentence";
-        Console.WriteLine(SummerizeText(testStr, 25));
+        Console.WriteLine(SummarizeText(testStr, 25));
 
     }
     
@@ -187,7 +187,7 @@ class Program
             Console.Write(num + " ");
     }
 
-    public static string SummerizeText(string text, int maxLength = 20)
+    public static string SummarizeText(string text, int maxLength = 20)
     {
         if (text.Length <= maxLength)
             return text;
