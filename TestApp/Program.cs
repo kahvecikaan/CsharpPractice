@@ -15,7 +15,10 @@ class Program
         // Solution2();
         // Solution3();
         // Solution4();
-        Solution5();
+        // Solution5();
+        var testStr = "This is a really really really long long long sentence";
+        Console.WriteLine(SummerizeText(testStr, 25));
+
     }
     
     /// <summary>
@@ -182,5 +185,25 @@ class Program
         Console.WriteLine("The smallest 3 numbers are: ");
         foreach (var num in smallests)
             Console.Write(num + " ");
+    }
+
+    public static string SummerizeText(string text, int maxLength = 20)
+    {
+        if (text.Length <= maxLength)
+            return text;
+        
+        var words = text.Split(" ");
+        var totalCharacters = 0;
+        var summaryWords = new List<string>();
+
+        foreach (var word in words)
+        {
+            if (word.Length + totalCharacters > maxLength)
+                break;
+            summaryWords.Add(word);
+            totalCharacters += word.Length + 1; // +1 for the space
+        }
+        
+        return (String.Join(" ", summaryWords) +  "...");
     }
 }
